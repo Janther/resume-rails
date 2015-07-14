@@ -1,0 +1,43 @@
+!!! 5
+/[if lt IE 7]
+  <html class="no-js ie6" xmlns="http://www.w3.org/1999/xhtml" lang="#{I18n.locale}">
+/[if IE 7]
+  <html class="no-js ie7" xmlns="http://www.w3.org/1999/xhtml" lang="#{I18n.locale}">
+/[if IE 8]
+  <html class="no-js ie8" xmlns="http://www.w3.org/1999/xhtml" lang="#{I18n.locale}">
+/[if IE 9]
+  <html class="no-js ie9" xmlns="http://www.w3.org/1999/xhtml" lang="#{I18n.locale}">
+<!--[if gt IE 9]><!-->
+%html.no-js{ lang: I18n.locale }
+  <!--<![endif]-->
+  %head
+    %title ResumeRails
+    = stylesheet_link_tag 'application',
+                          media: 'all',
+                          data: { turbolinks_track: true }
+    = javascript_include_tag 'application', data: { turbolinks_track: true }
+    = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
+    = csrf_meta_tags
+  %body
+    .mdl-layout.mdl-js-layout.mdl-layout--overlay-drawer-button
+      %header.mdl-layout__header
+        .mdl-layout-icon
+        .mdl-layout__header-row
+          %span.mdl-layout-title Simple Layout
+          .mdl-layout-spacer
+          %nav.mdl-navigation
+            %a.mdl-navigation__link{ href: '#' } Nav link 1
+            %a.mdl-navigation__link{ href: '#' } Nav link 2
+            %a.mdl-navigation__link{ href: '#' } Nav link 3
+      .mdl-layout__drawer
+        %span.mdl-layout-title Simple Layout
+        %nav.mdl-navigation
+          %a.mdl-navigation__link{ href: '#' } Nav link 1
+          %a.mdl-navigation__link{ href: '#' } Nav link 2
+          %a.mdl-navigation__link{ href: '#' } Nav link 3
+      = yield
+      %footer.mdl-mini-footer.mdl-color--grey-900
+        %ul{ style: 'align-items: center;' }
+          %a{ href: '#', style: 'margin: 0 16px; font-size: 12px; font-weight: 400; height: 24px;' }= fa_icon 'twitter-square 2x'
+          %a{ href: '#', style: 'margin: 0 16px; font-size: 12px; font-weight: 400; height: 24px;' }= fa_icon 'github-square 2x'
+          %a{ href: '#', style: 'margin: 0 16px; font-size: 12px; font-weight: 400; height: 24px;' }= fa_icon 'google-plus-square 2x'
