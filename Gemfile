@@ -32,12 +32,17 @@ gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# gem 'material-design-rails'
-# gem 'material_icons'
+gem 'material-design-rails'
+gem 'material_icons'
 gem 'font-awesome-rails'
 gem 'haml'
 
+gem 'activesupport-decorators'
+
 group :development, :test do
+  # Debuging like a pro
+  gem 'better_errors'
+  gem 'binding_of_caller'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem 'byebug'

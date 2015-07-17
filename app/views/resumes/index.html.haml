@@ -1,49 +1,7 @@
 %main.mdl-layout__content
-  .mdl-grid
+  .mdl-grid.mdl-grid--no-spacing
     .mdl-cell.mdl-cell--3-col
-      .mdl-card.mdl-shadow--2dp{ style: 'width: 100%;' }
-        .mdl-card__title.mdl-card--expand
-          %h4
-            Featured event:
-            %br
-            May 24, 2016
-            %br
-            7-11pm
-        .mdl-card__actions.mdl-card--border
-          %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
-            Add to Calendar
-      .mdl-grid
-        .mdl-cell.mdl-cell--2-col#account
-          .icon.material-icons account_box
-        .mdl-cell.mdl-cell--10-col
-          %input.mdl-slider.mdl-js-slider{ type: 'range',
-                                           min: 0,
-                                           max: 10,
-                                           value: 4,
-                                           step: 2 }
-    .mdl-cell.mdl-cell--9-col
-      .mdl-grid
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-        .mdl-cell.mdl-cell--1-col 1
-      .mdl-grid
-        .mdl-cell.mdl-cell--4-col 4
-        .mdl-cell.mdl-cell--4-col 4
-        .mdl-cell.mdl-cell--4-col 4
-      .mdl-grid
-        .mdl-cell.mdl-cell--6-col 6
-        .mdl-cell.mdl-cell--4-col 4
-        .mdl-cell.mdl-cell--2-col 2
-      .mdl-grid
-        .mdl-cell.mdl-cell--6-col.mdl-cell--8-col-tablet 6 (8 tablet)
-        .mdl-cell.mdl-cell--4-col.mdl-cell--6-col-tablet 4 (6 tablet)
-        .mdl-cell.mdl-cell--2-col.mdl-cell--4-col-phone 2 (4 phone)
+      = render 'sidebar'
+    .mdl-cell.mdl-cell--9-col.mdl-grid
+      = render 'section2'
+      = render 'section2'

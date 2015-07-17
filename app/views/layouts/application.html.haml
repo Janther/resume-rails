@@ -17,7 +17,7 @@
                           data: { turbolinks_track: true }
     = stylesheet_link_tag '//storage.googleapis.com/code.getmdl.io/1.0.0/material.blue_grey-indigo.min.css'
     = stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:300,400,500,700'
-    = stylesheet_link_tag '//fonts.googleapis.com/icon?family=Material+Icons'
+    -# = stylesheet_link_tag '//fonts.googleapis.com/icon?family=Material+Icons'
     = javascript_include_tag 'application', data: { turbolinks_track: true }
     = csrf_meta_tags
   %body
@@ -38,7 +38,7 @@
           %a.mdl-navigation__link{ href: '#' } Nav link 2
           %a.mdl-navigation__link{ href: '#' } Nav link 3
       = yield
-      %footer.mdl-mini-footer.mdl-color--grey-900
+      %footer.mdl-mini-footer.mdl-color--grey-900.mdl-color-text-white
         %ul{ style: 'align-items: center;' }
           %a{ href: '#', style: 'margin: 0 16px; font-size: 12px; font-weight: 400; height: 24px;' }= fa_icon 'twitter-square 2x'
           %a{ href: '#', style: 'margin: 0 16px; font-size: 12px; font-weight: 400; height: 24px;' }= fa_icon 'github-square 2x'

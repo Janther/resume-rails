@@ -1,0 +1,31 @@
+.mdl-card{ style: 'width: 100%;' }
+  .mdl-card__title
+    %h4
+      Featured event:
+      %br
+      May 24, 2016
+      %br
+      7-11pm
+  .mdl-card__actions.mdl-card--border
+    %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+      Add to Calendar
+.mdl-card.mdl-grid.mdl-grid--no-spacing
+  .mdl-cell.mdl-cell--2-col#account
+    = material_icon.account_box
+  .mdl-cell.mdl-cell--10-col
+    %label{ for: 'html5' }
+      HTML5
+      = fa_icon 'html5'
+    %input.mdl-slider.mdl-js-slider#html5{ type: 'range',
+                                           min: 0,
+                                           max: 10,
+                                           value: 4,
+                                           step: 2 }
+    %label{ for: 'css3' }
+      CSS3
+      = fa_icon 'css3'
+    %input.mdl-slider.mdl-js-slider#css3{ type: 'range',
+                                          min: 0,
+                                          max: 10,
+                                          value: 4,
+                                          step: 2 }
